@@ -4,7 +4,18 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] | Silicone</title>
+    <title>
+        @(!string.IsNullOrEmpty(ViewData["Title"].ToString()) ? ViewData["Title"] + " | Silicon" : "Silicon")
+    </title>
+
+    @if(!string.IsNullOrEmpty(ViewData["DarkMode"].ToString()))
+    {
+        <link rel="stylesheet" href="~/css/dark-mode.css" asp-append-version="true"/>
+    }
+    else
+    {
+        <link rel="stylesheet" href="~/css/light-mode.css" asp-append-version="true"/>
+    }
     <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
