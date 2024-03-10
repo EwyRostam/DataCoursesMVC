@@ -22,17 +22,17 @@
 </head>
 
 <body>
-    <partial name="~/Views/Partials/Sections/_Header.cshtml" />
-    <div>
-        <main role="main">
-            @RenderBody()
-        </main>
-    </div>
 
+    <section class="wrapper">
+        <partial name="~/Views/Partials/Sections/_Header.cshtml" />
+           
+            <main role="main">
+                @RenderBody()
+            </main>
 
+        <partial name="~/Views/Partials/Sections/_Footer.cshtml" />
+    </section>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    <partial name="~/Views/Partials/Sections/_Footer.cshtml" />
-
 </body>
 
 </html>
