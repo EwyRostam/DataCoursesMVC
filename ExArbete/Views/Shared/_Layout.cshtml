@@ -10,11 +10,11 @@
 
     @* @if(!string.IsNullOrEmpty(ViewData["DarkMode"].ToString()))
     {
-        <link rel="stylesheet" href="~/css/dark-mode.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/dark-mode.css" asp-append-version="true"/>
     }
     else
     {
-        <link rel="stylesheet" href="~/css/light-mode.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/light-mode.css" asp-append-version="true"/>
     } *@
 
     <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
@@ -22,19 +22,17 @@
 </head>
 
 <body>
-   <partial name="~/Views/Partials/Sections/_Header.cshtml"/>
+    <partial name="~/Views/Partials/Sections/_Header.cshtml" />
     <div>
         <main role="main">
             @RenderBody()
         </main>
     </div>
 
-    <footer>
-        <div>
-            &copy; 2024 Silicon. All Rights reserved.<a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <partial name="~/Views/Partials/Sections/_Footer.cshtml" />
+
 </body>
 
 </html>
