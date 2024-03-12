@@ -17,3 +17,32 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include sm {
+        max-width: 540 px;
+    }
+    
+    @include md {
+        max-width: 720 px;
+    }
+
+    @include lg {
+        max-width: 960 px;
+    }
+
+    @include xl {
+        max-width: 1140 px;
+    }
+
+    @include xxl {
+        max-width: 1320 px;
+    }
+
+}
