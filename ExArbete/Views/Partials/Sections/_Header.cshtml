@@ -1,5 +1,5 @@
  <header>
-        <nav class="flex justify-around border">
+        <nav class="container">
             @* <div>
             <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ExArbete</a>
             <button type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
@@ -10,20 +10,23 @@
             <div> *@
             <ul class="flex border gap-x-5">
                 <li>
+                    <a class="logo" asp-controller="Home" asp-action="Index"><img src="~/images/logos/silicon-logo.svg" alt="Silicon logo"/></a>
+                </li>
+                <li>
                     <a asp-area="" asp-controller="Home" asp-action="Index">Overview</a>
                 </li>
                 <li>
-                    <a asp-area="" asp-controller="Home" asp-action="Privacy">Features</a>
+                    <a asp-area="" asp-controller="Home" asp-action="Index">Features</a>
                 </li>
                 <li>
                     <a asp-area="" asp-controller="Home" asp-action="Privacy">Contact</a>
                 </li>
             </ul>
-            <ul class="flex border gap-x-5">
+            <ul class="account-buttons">
                 <li>Light</li>
                 <li></li>
                 <li>Dark</li>
-                <li><a>Sign In</a></li>
+                <li><a asp-controller="Auth" asp-action="SignIn">Sign In</a></li>
                 <li><a>Sign Up</a></li>
             </ul>
         </nav>
